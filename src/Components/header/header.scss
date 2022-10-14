@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap");
+
+.header-wrapper {
+  background-color: transparent;
+  box-shadow: 1px 1px 10px 1px grey;
+  // .label-header-logo {
+  //   // font-family: "Montserrat", sans-serif;
+  // }
+}
+#show-menu-header {
+  display: none;
+}
+.nav-menu-tablet {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  bottom: 400px;
+  width: 26%;
+  z-index: 99;
+  opacity: 0;
+  padding: 18px;
+  background-color: white;
+  transform: translateX(100%);
+  transition: all linear 0.5s;
+}
+#show-menu-header:checked ~ .main-overlay {
+  display: block;
+}
+#show-menu-header:checked ~ .nav-menu-tablet {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.main-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.603);
+  animation: fadeInHeader linear 0.2s;
+}
+
+@media only screen and (max-width: 687px) {
+  .respone-login {
+    display: none;
+  }
+  .tabs-select-menu{
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1142px) {
+  .main-overlay {
+    opacity: 0;
+  }
+  .nav-menu-tablet {
+    display: none;
+  }
+  .tabs-select-menu{
+    display: hidden !important;
+  }
+}
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

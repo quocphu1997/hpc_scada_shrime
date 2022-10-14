@@ -1,0 +1,26 @@
+.Wrapper{
+  background-color: #FFFFFF;
+
+}
+.ant-tabs-tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 14px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 0 0 0px;
+}
+.ant-tabs-tab-active{
+  transition: background-color 0.8s ease-in-out;
+  background-color: #391085;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #f9fafb;
+  text-shadow: 0 0 0.25px currentcolor;
+}
