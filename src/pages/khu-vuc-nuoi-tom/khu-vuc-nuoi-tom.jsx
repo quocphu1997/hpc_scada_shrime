@@ -26,6 +26,7 @@ export default function KhuVucNuoiTom() {
   //modal antd
   const showModal1 = () => {
     setModal1Open(true);
+    setModalText("Cài đặt");
   };
   const handleOk1 = () => {
     setConfirmLoading(true);
@@ -41,6 +42,7 @@ export default function KhuVucNuoiTom() {
   };
   // 2
   const showModal2 = () => {
+    setModalText("Cài đặt");
     setModal2Open(true);
   };
   const handleOk2 = () => {
@@ -57,6 +59,7 @@ export default function KhuVucNuoiTom() {
   };
   // 3
   const showModal3 = () => {
+    setModalText("Cài đặt");
     setModal3Open(true);
   };
   const handleOk3 = () => {
@@ -73,6 +76,7 @@ export default function KhuVucNuoiTom() {
   };
   // 4
   const showModal4 = () => {
+    setModalText("Cài đặt");
     setModal4Open(true);
   };
   const handleOk4 = () => {
@@ -89,6 +93,7 @@ export default function KhuVucNuoiTom() {
   };
   // 5
   const showModal5 = () => {
+    setModalText("Cài đặt");
     setModal5Open(true);
   };
   const handleOk5 = () => {
@@ -105,6 +110,7 @@ export default function KhuVucNuoiTom() {
   };
   // 6
   const showModal6 = () => {
+    setModalText("Cài đặt");
     setModal6Open(true);
   };
   const handleOk6 = () => {
@@ -201,7 +207,7 @@ export default function KhuVucNuoiTom() {
     setAutoMan6(!autoMan6);
   };
   // dropdown antd
-  const menu = (
+  const menu1 = (
     <Menu
       items={[
         {
@@ -216,14 +222,244 @@ export default function KhuVucNuoiTom() {
           key: "0",
         },
         {
-          label: <a href="https://www.aliyun.com">2nd menu item</a>,
+          label: (
+            <button
+              className="block btn-chucnang btn-dieukhien"
+              onClick={() => {
+                navigate(`/dieukhien/${autoMan1}`);
+              }}
+            >
+              Điều khiển
+            </button>
+          ),
           key: "1",
         },
         {
-          type: "divider",
+          label: (
+            <button
+              className="block btn-chucnang btn-xsl"
+              onClick={() => {
+                navigate("/xemsolieu");
+              }}
+            >
+              Xem số liệu
+            </button>
+          ),
+          key: "3",
+        },
+      ]}
+    />
+  );
+  const menu2 = (
+    <Menu
+      items={[
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-caidat"
+              onClick={showModal2}
+            >
+              Cài đặt
+            </button>
+          ),
+          key: "0",
         },
         {
-          label: "3rd menu item",
+          label: (
+            <button
+              className="block btn-chucnang btn-dieukhien"
+              onClick={() => {
+                navigate(`/dieukhien/${autoMan2}`);
+              }}
+            >
+              Điều khiển
+            </button>
+          ),
+          key: "1",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-xsl"
+              onClick={() => {
+                navigate("/xemsolieu");
+              }}
+            >
+              Xem số liệu
+            </button>
+          ),
+          key: "3",
+        },
+      ]}
+    />
+  );
+  const menu3 = (
+    <Menu
+      items={[
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-caidat"
+              onClick={showModal3}
+            >
+              Cài đặt
+            </button>
+          ),
+          key: "0",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-dieukhien"
+              onClick={() => {
+                navigate(`/dieukhien/${autoMan3}`);
+              }}
+            >
+              Điều khiển
+            </button>
+          ),
+          key: "1",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-xsl"
+              onClick={() => {
+                navigate("/xemsolieu");
+              }}
+            >
+              Xem số liệu
+            </button>
+          ),
+          key: "3",
+        },
+      ]}
+    />
+  );
+  const menu4 = (
+    <Menu
+      items={[
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-caidat"
+              onClick={showModal4}
+            >
+              Cài đặt
+            </button>
+          ),
+          key: "0",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-dieukhien"
+              onClick={() => {
+                navigate(`/dieukhien/${autoMan4}`);
+              }}
+            >
+              Điều khiển
+            </button>
+          ),
+          key: "1",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-xsl"
+              onClick={() => {
+                navigate("/xemsolieu");
+              }}
+            >
+              Xem số liệu
+            </button>
+          ),
+          key: "3",
+        },
+      ]}
+    />
+  );
+  const menu5 = (
+    <Menu
+      items={[
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-caidat"
+              onClick={showModal5}
+            >
+              Cài đặt
+            </button>
+          ),
+          key: "0",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-dieukhien"
+              onClick={() => {
+                navigate(`/dieukhien/${autoMan5}`);
+              }}
+            >
+              Điều khiển
+            </button>
+          ),
+          key: "1",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-xsl"
+              onClick={() => {
+                navigate("/xemsolieu");
+              }}
+            >
+              Xem số liệu
+            </button>
+          ),
+          key: "3",
+        },
+      ]}
+    />
+  );
+  const menu6 = (
+    <Menu
+      items={[
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-caidat"
+              onClick={showModal6}
+            >
+              Cài đặt
+            </button>
+          ),
+          key: "0",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-dieukhien"
+              onClick={() => {
+                navigate(`/dieukhien/${autoMan6}`);
+              }}
+            >
+              Điều khiển
+            </button>
+          ),
+          key: "1",
+        },
+        {
+          label: (
+            <button
+              className="block btn-chucnang btn-xsl"
+              onClick={() => {
+                navigate("/xemsolieu");
+              }}
+            >
+              Xem số liệu
+            </button>
+          ),
           key: "3",
         },
       ]}
@@ -231,38 +467,35 @@ export default function KhuVucNuoiTom() {
   );
 
   return (
-    <div className="grid grid-cols-12 py-10 gap-10 kvnt-wrapper ">
-      <div className="benuoi col-span-6">
+    <div className="grid grid-cols-12 p-10 gap-10 kvnt-wrapper ">
+      <div className="benuoi col-span-6 m-5">
         <div className="grid grid-cols-12 thongtin-benuoi">
-          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-10">
+          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 1
           </span>
+          <span className="p-2 indicator indicar-err col-span-12">
+            console.error();
+          </span>
           <div className="col-start-3 col-span-5 hienthi-be">
-            <div className="flex flex-wrap justify-center ml-4">
-              <span className="p-2 indicator indicar-err">
-                console.error();
-              </span>
+            <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
               <span className="p-2 indicator">T:...℃</span>
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div>
-              <Dropdown overlay={menu} trigger={["click"]}>
-                <a onClick={(e) => e.preventDefault()}>
+            <div className="mr-5">
+              <Dropdown overlay={menu1} trigger={["click"]}>
+                <button
+                  className="btn-chucnang"
+                  onClick={(e) => e.preventDefault()}
+                >
                   <Space>
                     Click me
                     <DownOutlined />
                   </Space>
-                </a>
+                </button>
               </Dropdown>
               {/*  */}
-              <button
-                className="block btn-chucnang btn-caidat"
-                onClick={showModal1}
-              >
-                Cài đặt
-              </button>
               {/* cài đặt */}
               <Modal
                 title={`Bể nuôi 1 - ${modalText}`}
@@ -338,22 +571,6 @@ export default function KhuVucNuoiTom() {
                   </Form.Item>
                 </Form>
               </Modal>
-              <button
-                className="block btn-chucnang btn-dieukhien"
-                onClick={() => {
-                  navigate(`/dieukhien/${autoMan1}`);
-                }}
-              >
-                Điều khiển
-              </button>
-              <button
-                className="block btn-chucnang btn-xsl"
-                onClick={() => {
-                  navigate("/xemsolieu");
-                }}
-              >
-                Xem số liệu
-              </button>
               {/*  */}
               <button
                 className={`block btn-chucnang btn-chedo ${
@@ -371,28 +588,35 @@ export default function KhuVucNuoiTom() {
           </div>
         </div>
       </div>
-      <div className="benuoi col-span-6">
+      <div className="benuoi col-span-6 m-5">
         <div className="grid grid-cols-12 thongtin-benuoi">
-          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-10">
+          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 2
           </span>
+          <span className="p-2 indicator indicar-err col-span-12">
+            console.error();
+          </span>
           <div className="col-start-3 col-span-5 hienthi-be">
-            <div className="flex flex-wrap justify-center ml-4">
-              <span className="p-2 indicator bg-lime-100">Oxy:...mg/l</span>
-              <span className="p-2 indicator bg-lime-100">T:...℃</span>
-              <span className="p-2 indicator indicar-err">
-                console.error();
-              </span>
+            <div className="flex flex-wrap justify-center ml-2 mb-6">
+              <span className="p-2 indicator">Oxy:...mg/l</span>
+              <span className="p-2 indicator">T:...℃</span>
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div>
-              <button
-                className="block btn-chucnang btn-caidat"
-                onClick={showModal2}
-              >
-                Cài đặt
-              </button>
+            <div className="mr-5">
+              <Dropdown overlay={menu2} trigger={["click"]}>
+                <button
+                  className="btn-chucnang"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Space>
+                    Click me
+                    <DownOutlined />
+                  </Space>
+                </button>
+              </Dropdown>
+              {/*  */}
+              {/* cài đặt */}
               <Modal
                 title={`Bể nuôi 2 - ${modalText}`}
                 open={modal2Open}
@@ -423,7 +647,7 @@ export default function KhuVucNuoiTom() {
                     rules={[
                       {
                         required: true,
-                        message: "Chưa nhập thông số Oxy (Mg/l)",
+                        message: "Chưa nhập thông số Oxy",
                       },
                     ]}
                   >
@@ -467,22 +691,7 @@ export default function KhuVucNuoiTom() {
                   </Form.Item>
                 </Form>
               </Modal>
-              <button
-                className="block btn-chucnang btn-dieukhien"
-                onClick={() => {
-                  navigate(`/dieukhien/${autoMan2}`);
-                }}
-              >
-                Điều khiển
-              </button>
-              <button
-                className="block btn-chucnang btn-xsl"
-                onClick={() => {
-                  navigate("/xemsolieu");
-                }}
-              >
-                Xem số liệu
-              </button>
+              {/*  */}
               <button
                 className={`block btn-chucnang btn-chedo ${
                   autoMan2 ? "type-auto" : "type-man"
@@ -499,28 +708,35 @@ export default function KhuVucNuoiTom() {
           </div>
         </div>
       </div>
-      <div className="benuoi col-span-6">
+      <div className="benuoi col-span-6 m-5">
         <div className="grid grid-cols-12 thongtin-benuoi">
-          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-10">
+          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 3
           </span>
+          <span className="p-2 indicator indicar-err col-span-12">
+            console.error();
+          </span>
           <div className="col-start-3 col-span-5 hienthi-be">
-            <div className="flex flex-wrap justify-center ml-4">
-              <span className="p-2 indicator bg-lime-100">Oxy:...mg/l</span>
-              <span className="p-2 indicator bg-lime-100">T:...℃</span>
-              <span className="p-2 indicator indicar-err">
-                console.error();
-              </span>
+            <div className="flex flex-wrap justify-center ml-2 mb-6">
+              <span className="p-2 indicator">Oxy:...mg/l</span>
+              <span className="p-2 indicator">T:...℃</span>
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div>
-              <button
-                className="block btn-chucnang btn-caidat"
-                onClick={showModal3}
-              >
-                Cài đặt
-              </button>
+            <div className="mr-5">
+              <Dropdown overlay={menu3} trigger={["click"]}>
+                <button
+                  className="btn-chucnang"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Space>
+                    Click me
+                    <DownOutlined />
+                  </Space>
+                </button>
+              </Dropdown>
+              {/*  */}
+              {/* cài đặt */}
               <Modal
                 title={`Bể nuôi 3 - ${modalText}`}
                 open={modal3Open}
@@ -595,22 +811,7 @@ export default function KhuVucNuoiTom() {
                   </Form.Item>
                 </Form>
               </Modal>
-              <button
-                className="block btn-chucnang btn-dieukhien"
-                onClick={() => {
-                  navigate(`/dieukhien/${autoMan3}`);
-                }}
-              >
-                Điều khiển
-              </button>
-              <button
-                className="block btn-chucnang btn-xsl"
-                onClick={() => {
-                  navigate("/xemsolieu");
-                }}
-              >
-                Xem số liệu
-              </button>
+              {/*  */}
               <button
                 className={`block btn-chucnang btn-chedo ${
                   autoMan3 ? "type-auto" : "type-man"
@@ -627,28 +828,35 @@ export default function KhuVucNuoiTom() {
           </div>
         </div>
       </div>
-      <div className="benuoi col-span-6">
+      <div className="benuoi col-span-6 m-5">
         <div className="grid grid-cols-12 thongtin-benuoi">
-          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-10">
+          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 4
           </span>
+          <span className="p-2 indicator indicar-err col-span-12">
+            console.error();
+          </span>
           <div className="col-start-3 col-span-5 hienthi-be">
-            <div className="flex flex-wrap justify-center ml-4">
-              <span className="p-2 indicator bg-lime-100">Oxy:...mg/l</span>
-              <span className="p-2 indicator bg-lime-100">T:...℃</span>
-              <span className="p-2 indicator indicar-err">
-                console.error();
-              </span>
+            <div className="flex flex-wrap justify-center ml-2 mb-6">
+              <span className="p-2 indicator">Oxy:...mg/l</span>
+              <span className="p-2 indicator">T:...℃</span>
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div>
-              <button
-                className="block btn-chucnang btn-caidat"
-                onClick={showModal4}
-              >
-                Cài đặt
-              </button>
+            <div className="mr-5">
+              <Dropdown overlay={menu4} trigger={["click"]}>
+                <button
+                  className="btn-chucnang"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Space>
+                    Click me
+                    <DownOutlined />
+                  </Space>
+                </button>
+              </Dropdown>
+              {/*  */}
+              {/* cài đặt */}
               <Modal
                 title={`Bể nuôi 4 - ${modalText}`}
                 open={modal4Open}
@@ -723,22 +931,7 @@ export default function KhuVucNuoiTom() {
                   </Form.Item>
                 </Form>
               </Modal>
-              <button
-                className="block btn-chucnang btn-dieukhien"
-                onClick={() => {
-                  navigate(`/dieukhien/${autoMan4}`);
-                }}
-              >
-                Điều khiển
-              </button>
-              <button
-                className="block btn-chucnang btn-xsl"
-                onClick={() => {
-                  navigate("/xemsolieu");
-                }}
-              >
-                Xem số liệu
-              </button>
+              {/*  */}
               <button
                 className={`block btn-chucnang btn-chedo ${
                   autoMan4 ? "type-auto" : "type-man"
@@ -755,28 +948,35 @@ export default function KhuVucNuoiTom() {
           </div>
         </div>
       </div>
-      <div className="benuoi col-span-6">
+      <div className="benuoi col-span-6 m-5">
         <div className="grid grid-cols-12 thongtin-benuoi">
-          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-10">
+          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 5
           </span>
+          <span className="p-2 indicator indicar-err col-span-12">
+            console.error();
+          </span>
           <div className="col-start-3 col-span-5 hienthi-be">
-            <div className="flex flex-wrap justify-center ml-4">
-              <span className="p-2 indicator bg-lime-100">Oxy:...mg/l</span>
-              <span className="p-2 indicator bg-lime-100">T:...℃</span>
-              <span className="p-2 indicator indicar-err">
-                console.error();
-              </span>
+            <div className="flex flex-wrap justify-center ml-2 mb-6">
+              <span className="p-2 indicator">Oxy:...mg/l</span>
+              <span className="p-2 indicator">T:...℃</span>
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div>
-              <button
-                className="block btn-chucnang btn-caidat"
-                onClick={showModal5}
-              >
-                Cài đặt
-              </button>
+            <div className="mr-5">
+              <Dropdown overlay={menu5} trigger={["click"]}>
+                <button
+                  className="btn-chucnang"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Space>
+                    Click me
+                    <DownOutlined />
+                  </Space>
+                </button>
+              </Dropdown>
+              {/*  */}
+              {/* cài đặt */}
               <Modal
                 title={`Bể nuôi 5 - ${modalText}`}
                 open={modal5Open}
@@ -851,22 +1051,7 @@ export default function KhuVucNuoiTom() {
                   </Form.Item>
                 </Form>
               </Modal>
-              <button
-                className="block btn-chucnang btn-dieukhien"
-                onClick={() => {
-                  navigate(`/dieukhien/${autoMan5}`);
-                }}
-              >
-                Điều khiển
-              </button>
-              <button
-                className="block btn-chucnang btn-xsl"
-                onClick={() => {
-                  navigate("/xemsolieu");
-                }}
-              >
-                Xem số liệu
-              </button>
+              {/*  */}
               <button
                 className={`block btn-chucnang btn-chedo ${
                   autoMan5 ? "type-auto" : "type-man"
@@ -883,28 +1068,35 @@ export default function KhuVucNuoiTom() {
           </div>
         </div>
       </div>
-      <div className="benuoi col-span-6">
+      <div className="benuoi col-span-6 m-5">
         <div className="grid grid-cols-12 thongtin-benuoi">
-          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-10">
+          <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 6
           </span>
+          <span className="p-2 indicator indicar-err col-span-12">
+            console.error();
+          </span>
           <div className="col-start-3 col-span-5 hienthi-be">
-            <div className="flex flex-wrap justify-center ml-4">
-              <span className="p-2 indicator bg-lime-100">Oxy:...mg/l</span>
-              <span className="p-2 indicator bg-lime-100">T:...℃</span>
-              <span className="p-2 indicator indicar-err">
-                console.error();
-              </span>
+            <div className="flex flex-wrap justify-center ml-2 mb-6">
+              <span className="p-2 indicator">Oxy:...mg/l</span>
+              <span className="p-2 indicator">T:...℃</span>
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div>
-              <button
-                className="block btn-chucnang btn-caidat"
-                onClick={showModal6}
-              >
-                Cài đặt
-              </button>
+            <div className="mr-5">
+              <Dropdown overlay={menu6} trigger={["click"]}>
+                <button
+                  className="btn-chucnang"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Space>
+                    Click me
+                    <DownOutlined />
+                  </Space>
+                </button>
+              </Dropdown>
+              {/*  */}
+              {/* cài đặt */}
               <Modal
                 title={`Bể nuôi 6 - ${modalText}`}
                 open={modal6Open}
@@ -979,22 +1171,7 @@ export default function KhuVucNuoiTom() {
                   </Form.Item>
                 </Form>
               </Modal>
-              <button
-                className="block btn-chucnang btn-dieukhien"
-                onClick={() => {
-                  navigate(`/dieukhien/${autoMan6}`);
-                }}
-              >
-                Điều khiển
-              </button>
-              <button
-                className="block btn-chucnang btn-xsl"
-                onClick={() => {
-                  navigate("/xemsolieu");
-                }}
-              >
-                Xem số liệu
-              </button>
+              {/*  */}
               <button
                 className={`block btn-chucnang btn-chedo ${
                   autoMan6 ? "type-auto" : "type-man"
