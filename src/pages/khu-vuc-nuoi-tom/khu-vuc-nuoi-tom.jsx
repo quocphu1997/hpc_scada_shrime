@@ -1,12 +1,37 @@
-import { Button, Modal, Form, Input, Dropdown, Menu, Space } from "antd";
+import {
+  Button,
+  Modal,
+  Form,
+  Input,
+  Dropdown,
+  Menu,
+  Space,
+  notification,
+} from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./khuvucnuoitom.scss";
+import { useEffect } from "react";
 
 export default function KhuVucNuoiTom() {
   const navigate = useNavigate();
+  // err
+  const [errBe1, setErrBe1] = useState(false);
+  const [errBe2, setErrBe2] = useState(false);
+  const [errBe3, setErrBe3] = useState(false);
+  const [errBe4, setErrBe4] = useState(false);
+  const [errBe5, setErrBe5] = useState(false);
+  const [errBe6, setErrBe6] = useState(false);
+  // blink
+  const [blink1, setBlink1] = useState(false);
+  const [blink2, setBlink2] = useState(false);
+  const [blink3, setBlink3] = useState(false);
+  const [blink4, setBlink4] = useState(false);
+  const [blink5, setBlink5] = useState(false);
+  const [blink6, setBlink6] = useState(false);
+  //
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [modalText, setModalText] = useState("Cài đặt");
   const [modal1Open, setModal1Open] = useState(false);
@@ -465,7 +490,60 @@ export default function KhuVucNuoiTom() {
       ]}
     />
   );
-
+  // hiệu ứng err bể
+  useEffect(() => {
+    if (errBe1) {
+      const interval = setInterval(() => {
+        setBlink1(!blink1);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink1]);
+  //
+  useEffect(() => {
+    if (errBe2) {
+      const interval = setInterval(() => {
+        setBlink2(!blink2);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink2]);
+  //
+  useEffect(() => {
+    if (errBe3) {
+      const interval = setInterval(() => {
+        setBlink3(!blink3);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink3]);
+  //
+  useEffect(() => {
+    if (errBe4) {
+      const interval = setInterval(() => {
+        setBlink4(!blink4);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink4]);
+  //
+  useEffect(() => {
+    if (errBe5) {
+      const interval = setInterval(() => {
+        setBlink5(!blink5);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink5]);
+  //
+  useEffect(() => {
+    if (errBe6) {
+      const interval = setInterval(() => {
+        setBlink6(!blink6);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink6]);
   return (
     <div className="grid grid-cols-12 p-10 gap-10 kvnt-wrapper ">
       <div className="benuoi col-span-6 m-5">
@@ -473,9 +551,21 @@ export default function KhuVucNuoiTom() {
           <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 1
           </span>
-          <span className="p-2 indicator indicar-err col-span-12">
-            console.error();
-          </span>
+          {blink1 ? (
+            <span
+              className=" indicator indicar-err col-span-12 "
+              style={{ color: "white", background: "red" }}
+            >
+              console.error();
+            </span>
+          ) : (
+            <span
+              className=" indicator indicar-err col-span-12"
+              style={{ color: "transparent", background: "transparent" }}
+            >
+              console.error();
+            </span>
+          )}
           <div className="col-start-3 col-span-5 hienthi-be">
             <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
@@ -483,14 +573,14 @@ export default function KhuVucNuoiTom() {
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div className="mr-5">
+            <div className="mr-5 phimchucnangbe">
               <Dropdown overlay={menu1} trigger={["click"]}>
                 <button
                   className="btn-chucnang"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Click me
+                    Chức năng
                     <DownOutlined />
                   </Space>
                 </button>
@@ -593,9 +683,21 @@ export default function KhuVucNuoiTom() {
           <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 2
           </span>
-          <span className="p-2 indicator indicar-err col-span-12">
-            console.error();
-          </span>
+          {blink2 ? (
+            <span
+              className=" indicator indicar-err col-span-12 "
+              style={{ color: "white", background: "red" }}
+            >
+              console.error();
+            </span>
+          ) : (
+            <span
+              className=" indicator indicar-err col-span-12"
+              style={{ color: "transparent", background: "transparent" }}
+            >
+              console.error();
+            </span>
+          )}
           <div className="col-start-3 col-span-5 hienthi-be">
             <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
@@ -603,14 +705,14 @@ export default function KhuVucNuoiTom() {
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div className="mr-5">
+            <div className="mr-5 phimchucnangbe">
               <Dropdown overlay={menu2} trigger={["click"]}>
                 <button
                   className="btn-chucnang"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Click me
+                    Chức năng
                     <DownOutlined />
                   </Space>
                 </button>
@@ -713,9 +815,21 @@ export default function KhuVucNuoiTom() {
           <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 3
           </span>
-          <span className="p-2 indicator indicar-err col-span-12">
-            console.error();
-          </span>
+          {blink3 ? (
+            <span
+              className=" indicator indicar-err col-span-12 "
+              style={{ color: "white", background: "red" }}
+            >
+              console.error();
+            </span>
+          ) : (
+            <span
+              className=" indicator indicar-err col-span-12"
+              style={{ color: "transparent", background: "transparent" }}
+            >
+              console.error();
+            </span>
+          )}
           <div className="col-start-3 col-span-5 hienthi-be">
             <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
@@ -723,14 +837,14 @@ export default function KhuVucNuoiTom() {
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div className="mr-5">
+            <div className="mr-5 phimchucnangbe">
               <Dropdown overlay={menu3} trigger={["click"]}>
                 <button
                   className="btn-chucnang"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Click me
+                    Chức năng
                     <DownOutlined />
                   </Space>
                 </button>
@@ -833,9 +947,21 @@ export default function KhuVucNuoiTom() {
           <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 4
           </span>
-          <span className="p-2 indicator indicar-err col-span-12">
-            console.error();
-          </span>
+          {blink4 ? (
+            <span
+              className=" indicator indicar-err col-span-12 "
+              style={{ color: "white", background: "red" }}
+            >
+              console.error();
+            </span>
+          ) : (
+            <span
+              className=" indicator indicar-err col-span-12"
+              style={{ color: "transparent", background: "transparent" }}
+            >
+              console.error();
+            </span>
+          )}
           <div className="col-start-3 col-span-5 hienthi-be">
             <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
@@ -843,14 +969,14 @@ export default function KhuVucNuoiTom() {
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div className="mr-5">
+            <div className="mr-5 phimchucnangbe">
               <Dropdown overlay={menu4} trigger={["click"]}>
                 <button
                   className="btn-chucnang"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Click me
+                    Chức năng
                     <DownOutlined />
                   </Space>
                 </button>
@@ -953,9 +1079,21 @@ export default function KhuVucNuoiTom() {
           <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 5
           </span>
-          <span className="p-2 indicator indicar-err col-span-12">
-            console.error();
-          </span>
+          {blink5 ? (
+            <span
+              className=" indicator indicar-err col-span-12 "
+              style={{ color: "white", background: "red" }}
+            >
+              console.error();
+            </span>
+          ) : (
+            <span
+              className=" indicator indicar-err col-span-12"
+              style={{ color: "transparent", background: "transparent" }}
+            >
+              console.error();
+            </span>
+          )}
           <div className="col-start-3 col-span-5 hienthi-be">
             <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
@@ -963,14 +1101,14 @@ export default function KhuVucNuoiTom() {
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div className="mr-5">
+            <div className="mr-5 phimchucnangbe">
               <Dropdown overlay={menu5} trigger={["click"]}>
                 <button
                   className="btn-chucnang"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Click me
+                    Chức năng
                     <DownOutlined />
                   </Space>
                 </button>
@@ -1073,9 +1211,21 @@ export default function KhuVucNuoiTom() {
           <span className="flex justify-center col-span-12 text-center h-16 items-center font-bold text-xl ml-24">
             Bể nuôi 6
           </span>
-          <span className="p-2 indicator indicar-err col-span-12">
-            console.error();
-          </span>
+          {blink6 ? (
+            <span
+              className=" indicator indicar-err col-span-12 "
+              style={{ color: "white", background: "red" }}
+            >
+              console.error();
+            </span>
+          ) : (
+            <span
+              className=" indicator indicar-err col-span-12"
+              style={{ color: "transparent", background: "transparent" }}
+            >
+              console.error();
+            </span>
+          )}
           <div className="col-start-3 col-span-5 hienthi-be">
             <div className="flex flex-wrap justify-center ml-2 mb-6">
               <span className="p-2 indicator">Oxy:...mg/l</span>
@@ -1083,14 +1233,14 @@ export default function KhuVucNuoiTom() {
             </div>
           </div>
           <div className="col-start-9 col-span-4 chucnang-be">
-            <div className="mr-5">
+            <div className="mr-5 phimchucnangbe">
               <Dropdown overlay={menu6} trigger={["click"]}>
                 <button
                   className="btn-chucnang"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Click me
+                    Chức năng
                     <DownOutlined />
                   </Space>
                 </button>

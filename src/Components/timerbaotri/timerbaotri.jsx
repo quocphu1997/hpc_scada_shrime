@@ -29,15 +29,13 @@ export default function TimerBaoTri() {
                 <h2 className="text-gray-900 title-font font-medium">
                   Bơm đầu vào
                 </h2>
-                <p className="text-gray-500">
-                  thời gian chạy:{" "}
-                  
-                </p>
+                <p className="text-gray-500">thời gian chạy: </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </section>
   );
 }

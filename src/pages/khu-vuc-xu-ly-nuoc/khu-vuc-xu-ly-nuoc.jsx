@@ -38,7 +38,7 @@ export default function KhuVucXuLyNuoc() {
             }
           }}
         >
-          Chế độ chạy: {!stateManAu ? "Manual" : "Auto"}
+          Chế độ chạy: {!stateManAu ? "thủ công" : "tự động"}
         </button>
         <img
           className="pic-xlnc"

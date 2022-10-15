@@ -37,7 +37,7 @@
 .indicar-err {
   margin-left: 135px;
   margin-bottom: 0;
-  width: 300px;
+  width: 180px;
   padding: 0 20px;
   background-color: red;
   color: white;
@@ -64,10 +64,10 @@
   font-size: 1rem;
   background-color: #f8b122;
 }
-.type-auto{
+.type-auto {
   background-color: #61eb1c;
 }
-.type-man{
+.type-man {
   background-color: #f8b122;
 }
 // form antd
@@ -81,7 +81,8 @@
   background-clip: padding-box;
   border-radius: 20px;
   outline: none;
-  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
 }
 .ant-modal-mask {
   position: fixed;
@@ -150,15 +151,34 @@
   .indicator {
     text-align: center;
     font-size: 0.9rem;
-    margin: 2px 10px 2px 2px;
+    background-color: rgba(255, 255, 255, 0.637);
+    margin: 2px 0px 2px 20px;
     padding: 5px !important;
-    min-width: 100px;
+    min-width: 80px;
+  }
+  .indicar-err {
+    margin-left: 73px !important;
+    background-color: red;
   }
   .btn-chucnang {
     font-size: 0.7rem;
     min-width: 100px;
     border-radius: 20px;
-    margin: 7px;
+    margin: 5px 0 0 0;
     padding: 5px;
+  }
+  .phimchucnangbe {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1142px) {
+  .indicar-err {
+    background-color: red;
+    width: 300px;
+  }
+  .indicator {
+    margin-right: 25px;
+    background-color: rgba(255, 255, 255, 0.637);
   }
 }
