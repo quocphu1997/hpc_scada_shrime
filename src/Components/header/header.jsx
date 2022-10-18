@@ -1,10 +1,23 @@
+import { Avatar } from "antd";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
+import { LOGIN_USER, USER_ACCOUNTS } from "../../store/name.types/name.type";
 import "./header.scss";
 
 export default function Header() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { userAc } = useSelector((state) => state.quanlyUserReducer);
   const handleLogin = () => {
+    navigate("/login");
+  };
+  const handleLogout = () => {
+    localStorage.removeItem(USER_ACCOUNTS);
+    dispatch({
+      type: LOGIN_USER,
+      payload: null,
+    });
     navigate("/login");
   };
   return (
@@ -85,13 +98,26 @@ export default function Header() {
           </li>
         </ul>
         <div className="items-center flex-shrink-0  lg:flex">
-          {/* <button className="self-center px-8 py-3 rounded">Sign in</button> */}
-          <button
-            className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900 respone-login"
-            onClick={handleLogin}
-          >
-            Sign in
-          </button>
+          {userAc ? (
+            <>
+              <Avatar style={{ color: "#f56a00", backgroundColor: "#fde3cf" }}>
+                {userAc.user_info?.last_name.substr(0, 1)}
+              </Avatar>
+              <button
+                className="self-center px-2  ml-3 py-2 rounded bg-violet-400"
+                onClick={handleLogout}
+              >
+                Đăng xuất
+              </button>
+            </>
+          ) : (
+            <button
+              className="self-center px-8 py-3 font-semibold rounded bg-violet-400 dark:text-gray-900 respone-login"
+              onClick={handleLogin}
+            >
+              Đăng nhập
+            </button>
+          )}
         </div>
         <input id="show-menu-header" type="checkbox" />
         <label htmlFor="show-menu-header" className="main-overlay"></label>

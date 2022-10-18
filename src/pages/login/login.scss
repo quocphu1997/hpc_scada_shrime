@@ -1,3 +1,56 @@
 .login-btn {
   background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
 }
+.form-control {
+  height: 50px;
+  padding: 20px !important;
+  border: 1px solid #fff;
+}
+.form-control:valid,
+.form-control:focus {
+  border-color: red;
+}
+.form-control:not(:placeholder-shown) + .user-name,
+.form-control:focus + .user-name {
+  display: inline-block;
+  background-color: white;
+  padding: 0 5px;
+  top: 0;
+  font-size: 0.8rem;
+  color: #dd3675;
+  transition: all 0.7s ease;
+}
+.form-control:not(:placeholder-shown) + .user-pass,
+.form-control:focus + .user-pass {
+  display: inline-block;
+  background-color: white;
+  padding: 0 5px;
+  font-size: 0.9rem;
+  top: 0;
+  color:#d8363a;
+  transition: 0.7s ease;
+}
+.form-field {
+  position: relative;
+}
+
+.user-name {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  font-size: 0.7rem;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+}
+.user-pass {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  font-size: 0.7rem;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+}

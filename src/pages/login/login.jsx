@@ -1,6 +1,47 @@
-import React from "react";
+import { notification } from "antd";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { fetchUserLoginPostApi } from "../../services/user";
+import { LOGIN_USER, USER_ACCOUNTS } from "../../store/name.types/name.type";
 import "./login.scss";
 export default function Login() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const result_login = await fetchUserLoginPostApi(user);
+      if (result_login.status === 200) {
+        localStorage.setItem(USER_ACCOUNTS, JSON.stringify(result_login.data));
+        await dispatch({
+          type: LOGIN_USER,
+          payload: result_login.data.user_info,
+        });
+        notification.success({
+          message: "Đăng nhập thành công",
+        });
+        navigate("/");
+      }
+    } catch (error) {
+      notification.error({
+        message: "Sai tài khoản hoặc mật khẩu",
+      });
+    }
+  };
+
   return (
     <section className="h-full gradient-form bg-gray-200 md:h-screen">
       <div className="container py-12 px-6 h-full">
@@ -20,32 +61,44 @@ export default function Login() {
                         SHRIMP COINTAINER FARM
                       </h4>
                     </div>
-                    <form>
-                      <p className="mb-4">Please login to your account</p>
-                      <div className="mb-4">
+                    <form onSubmit={handleSubmit}>
+                      {/* <p className="mb-4">Please login to your account</p> */}
+                      <div className="mb-4 form-field">
                         <input
                           type="text"
-                          className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                          id="exampleFormControlInput1"
-                          placeholder="Username"
+                          required
+                          name="username"
+                          onChange={handleChange}
+                          className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 "
+                          id="Input1"
+                          placeholder=" "
                         />
+                        <label htmlFor="Input1" className="user-name">
+                          Tài khoản
+                        </label>
                       </div>
-                      <div className="mb-4">
+                      <div className="mb-4 form-field">
                         <input
                           type="password"
-                          className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                          id="exampleFormControlInput1"
-                          placeholder="Password"
+                          name="password"
+                          required
+                          onChange={handleChange}
+                          className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 "
+                          id="Input2"
+                          placeholder=" "
                         />
+                        <label htmlFor="Input2" className="user-pass">
+                          Mật khẩu
+                        </label>
                       </div>
                       <div className="text-center pt-1 mb-12 pb-1">
                         <button
                           className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 login-btn"
-                          type="button"
+                          type="submit"
                           data-mdb-ripple="true"
                           data-mdb-ripple-color="light"
                         >
-                          Log in
+                          Đăng nhập
                         </button>
                       </div>
                     </form>

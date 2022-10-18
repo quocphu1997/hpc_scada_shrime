@@ -14,8 +14,16 @@ import { useNavigate } from "react-router-dom";
 
 import "./khuvucnuoitom.scss";
 import { useEffect } from "react";
+import { fetchCallBoxApi, fetchLoginApi } from "../../services/wecon.api";
+import { useAsync } from "../../hooks/useAsync";
+import { ACC_WECON, WECON_LOGIN } from "../../store/name.types/name.type";
+import { useDispatch } from "react-redux";
+
+
+
 
 export default function KhuVucNuoiTom() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   // err
   const [errBe1, setErrBe1] = useState(false);
@@ -544,6 +552,25 @@ export default function KhuVucNuoiTom() {
       return () => clearInterval(interval);
     }
   }, [blink6]);
+  // login wecon
+  const { state: weConAccs } = useAsync({
+    dependancies: [],
+    service: () => fetchLoginApi(),
+  });
+  useEffect(() => {
+    localStorage.setItem(WECON_LOGIN, JSON.stringify(weConAccs.sid));
+    dispatch({
+      type: ACC_WECON,
+      payload: weConAccs,
+    });
+  }, [weConAccs]);
+  // call box_http
+  const { state: Box_http } = useAsync({
+    dependancies: [weConAccs],
+    service: () => fetchCallBoxApi(),
+  });
+
+  console.log(Box_http);
   return (
     <div className="grid grid-cols-12 p-10 gap-10 kvnt-wrapper ">
       <div className="benuoi col-span-6 m-5">
@@ -1341,3 +1368,4 @@ export default function KhuVucNuoiTom() {
     </div>
   );
 }
+
