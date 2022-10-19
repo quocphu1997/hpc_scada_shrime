@@ -97,7 +97,7 @@ export default function Header() {
             </NavLink>
           </li>
         </ul>
-        <div className="items-center flex-shrink-0  lg:flex">
+        <div className="items-center flex-shrink-0  lg:flex hidden">
           {userAc ? (
             <>
               <Avatar style={{ color: "#f56a00", backgroundColor: "#fde3cf" }}>
@@ -182,6 +182,31 @@ export default function Header() {
               >
                 Công việc
               </NavLink>
+            </li>
+            <hr className="bg-red-500" />
+            <li className="flex">
+              {userAc ? (
+                <>
+                  <Avatar
+                    style={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
+                  >
+                    {userAc.user_info?.last_name.substr(0, 1)}
+                  </Avatar>
+                  <button
+                    className="self-center px-2  ml-3 py-2 rounded bg-violet-400"
+                    onClick={handleLogout}
+                  >
+                    Đăng xuất
+                  </button>
+                </>
+              ) : (
+                <button
+                  className="self-center px-8 py-3 font-semibold rounded bg-violet-400 dark:text-gray-900 respone-login"
+                  onClick={handleLogin}
+                >
+                  Đăng nhập
+                </button>
+              )}
             </li>
           </ul>
         </div>

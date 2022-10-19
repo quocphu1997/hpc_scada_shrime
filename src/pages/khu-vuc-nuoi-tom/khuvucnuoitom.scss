@@ -1,11 +1,17 @@
 .kvnt-wrapper {
   .benuoi {
-    //  position: relative;
-    background-image: url("../../../public/images/BeNuoi.png");
+    position: relative;
+    background-image: url("../../../public/images/Benuoikhongbom.svg");
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     min-height: 200px;
+    width: 500px;
+    height: 300px;
+    .title-be {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
     .thongtin-benuoi {
       .hienthi-be {
         display: flex;
@@ -21,16 +27,18 @@
         // margin-top: 10%;
         margin-bottom: 24%;
         margin-right: 5%;
+        margin-left: 40px;
       }
     }
   }
 }
+
 .indicator {
   text-align: center;
   font-size: 1.7rem;
   border-radius: 5px;
   font-weight: 700;
-  margin: 2px 2px 2px 100px;
+  margin: 2px 2px 2px 50px;
   min-width: 160px;
   padding: 5px 10px 0 10px;
 }
@@ -39,11 +47,12 @@
   margin-bottom: 0;
   width: 180px;
   padding: 0 20px;
+  border-radius: 10px;
   background-color: red;
   color: white;
 }
 .btn-chucnang {
-  background-color: white;
+  background-color: #a4e713;
   font-size: 1rem;
   min-width: 145px;
   border-radius: 20px;
@@ -53,12 +62,18 @@
 }
 .btn-caidat {
   background-color: #fde721;
+  margin: 0 !important;
+  padding: 10px !important;
 }
 .btn-dieukhien {
   background-color: #61eb1c;
+  margin: 0 !important;
+  padding: 10px !important;
 }
 .btn-xsl {
   background-color: #afe735;
+  margin: 0 !important;
+  padding: 10px !important;
 }
 .btn-chedo {
   font-size: 1rem;
@@ -141,6 +156,10 @@
   font-size: 14px;
   justify-content: space-around;
 }
+//
+//
+//
+//
 @media only screen and (max-width: 687px) {
   .kvnt-wrapper {
     padding: 50px 15px 0px 15px !important;
@@ -149,26 +168,36 @@
     background-size: 100% 85% !important;
   }
   .indicator {
-    text-align: center;
-    font-size: 0.9rem;
+    width: 140px;
+    margin-left: 10px;
+    font-size: 1.8rem;
     background-color: rgba(255, 255, 255, 0.637);
-    margin: 2px 0px 2px 20px;
-    padding: 5px !important;
-    min-width: 80px;
   }
   .indicar-err {
-    margin-left: 73px !important;
+    margin-left: 115px !important;
     background-color: red;
+    width: 350px;
   }
   .btn-chucnang {
-    font-size: 0.7rem;
-    min-width: 100px;
+    font-size: 1.3rem;
+    min-width: 180px;
     border-radius: 20px;
-    margin: 5px 0 0 0;
+    margin: 10px 15px 0 20px;
     padding: 5px;
   }
   .phimchucnangbe {
     margin-bottom: 20px;
+  }
+  .motor-status {
+    position: absolute;
+    bottom: 12px;
+    left: -17px;
+    width: 70px;
+  }
+  .solieu-be {
+    width: 100%;
+    height: 100%;
+    align-items: center;
   }
 }
 
@@ -180,5 +209,11 @@
   .indicator {
     margin-right: 25px;
     background-color: rgba(255, 255, 255, 0.637);
+  }
+  .motor-status {
+    position: absolute;
+    bottom: 14px;
+    left: -17px;
+    width: 70px;
   }
 }
