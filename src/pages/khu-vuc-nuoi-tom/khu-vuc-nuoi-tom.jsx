@@ -620,7 +620,7 @@ export default function KhuVucNuoiTom() {
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
                 <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span className="p-2 indicator">T:...℃</span>
+                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
               </div>
             </div>
 
@@ -787,7 +787,7 @@ export default function KhuVucNuoiTom() {
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
                 <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span className="p-2 indicator">T:...℃</span>
+                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
               </div>
             </div>
 
@@ -954,7 +954,7 @@ export default function KhuVucNuoiTom() {
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
                 <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span className="p-2 indicator">T:...℃</span>
+                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
               </div>
             </div>
 
@@ -1121,7 +1121,7 @@ export default function KhuVucNuoiTom() {
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
                 <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span className="p-2 indicator">T:...℃</span>
+                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
               </div>
             </div>
 
@@ -1288,7 +1288,7 @@ export default function KhuVucNuoiTom() {
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
                 <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span className="p-2 indicator">T:...℃</span>
+                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
               </div>
             </div>
 
@@ -1455,7 +1455,7 @@ export default function KhuVucNuoiTom() {
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
                 <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span className="p-2 indicator">T:...℃</span>
+                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
               </div>
             </div>
 

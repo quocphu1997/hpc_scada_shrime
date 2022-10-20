@@ -21,6 +21,328 @@
   left: -3px;
   width: 125px;
 }
+// van tuan hoan
+.dk-van-tuanhoan {
+  position: absolute;
+  top: 420px;
+  left: 180px;
+  width: 50px;
+}
+.dk-van-tuanhoan-run {
+  position: absolute;
+  top: 405px;
+  left: 163px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+// van xa 1
+.dk-van-xa1 {
+  position: absolute;
+  top: 462px;
+  left: -12px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+.dk-van-xa1-run {
+  position: absolute;
+  top: 479px;
+  left: 4px;
+  width: 50px;
+}
+// van xa 2
+.dk-van-xa2-run {
+  position: absolute;
+  top: 430px;
+  right: 111px;
+  width: 50px;
+}
+.dk-van-xa2 {
+  position: absolute;
+  top: 413px;
+  right: 127px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+// van in
+.dk-van-in {
+  position: absolute;
+  top: 17px;
+  right: 3px;
+  width: 50px;
+  transform: rotate(180deg);
+}
+.dk-van-in-run {
+  position: absolute;
+  top: 34px;
+  right: -13px;
+  width: 50px;
+  transform: rotate(270deg);
+}
+// bể 500l
+.err-500l {
+  position: absolute;
+  top: 320px;
+  left: 25px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: red;
+}
+.name-500l{
+  position: absolute;
+  top: 420px;
+  left: 50px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgba(41, 39, 39, 0.504);
+}
+.err-be{
+  position: absolute;
+  top: 55px;
+  right: 285px;
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: red;
+}
+.thong-so-oxy{
+  position: absolute;
+  text-align: center;
+  width: 350px;
+  top: 22%;
+  left: 39%;
+  font-weight: 600;
+  padding: 1px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.73);
+  color: #000000;
+  font-size: 5rem;
+}
+.thong-so-nhietdo{
+  position: absolute;
+  width: 350px;
+  text-align: center;
+  top: 45%;
+  left: 39%;
+  font-weight: 600;
+  padding: 1px 20px;
+  border-radius: 10px;
+  background-color: #FFFFA7;
+  color: black;
+  font-size: 5rem;
+}
+// motor
+.tuongtac-mt{
+  position: absolute;
+  top: 170px;
+  left: 80px;
+  width: 150px;
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popUp-mt{
+  display: none;
+  position: absolute;
+  top: 310px;
+  left: 80px;
+  width: 150px;
+  height: 140px;
+  border-radius: 10px;
+  z-index: 99;
+  background-color: rgba(246, 246, 225, 0.81);
+}
+.nav-overlay1{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #000000c1;
+}
+.title-pp{
+  padding: 2px 0;
+  margin-bottom: 2px;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #71daf7fe;
+  justify-content: center;
+  text-align: center;
+}
+.btn-dk{
+  width: 100px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 7px;
+  border: 1px solid black;
+  margin: 5px 5px 0 5px; 
+  margin-left:50% ;
+  transform: translateX(-50%);
+}
+// show motor
+#show-popup-1:checked ~ .popUp-mt{
+  display: block;
+}
+#show-popup-1:checked ~ .nav-overlay1{
+  display: block ;
+}
+//exhaust 1
+.tuongtac-ex1{
+  position: absolute;
+  bottom: 95px;
+  left: 65px;
+  width: 100px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popUp-ex1{
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 180px;
+  width: 150px;
+  height: 140px;
+  border-radius: 10px;
+  z-index: 99;
+  background-color: rgba(246, 246, 225, 0.81);
+}
+.nav-overlay2{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #000000c1;
+}
+//
+// show ex1
+#show-popup-2:checked ~ .popUp-ex1{
+  display: block;
+}
+#show-popup-2:checked ~ .nav-overlay2{
+  display: block ;
+}
+//valve  cyclic
+.tuongtac-tt{
+  position: absolute;
+  bottom: 125px;
+  left: 270px;
+  width: 70px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popUp-tt{
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 180px;
+  width: 150px;
+  height: 140px;
+  border-radius: 10px;
+  z-index: 99;
+  background-color: rgba(246, 246, 225, 0.81);
+}
+.nav-overlay3{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #000000c1;
+}
+#show-popup-3:checked ~ .popUp-tt{
+  display: block;
+}
+#show-popup-3:checked ~ .nav-overlay3{
+  display: block ;
+}
+//valve  exhaust 2
+.tuongtac-ex2{
+  position: absolute;
+  bottom: 145px;
+  right: 200px;
+  width: 100px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popUp-ex2{
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 300px;
+  width: 150px;
+  height: 140px;
+  border-radius: 10px;
+  z-index: 99;
+  background-color: rgba(246, 246, 225, 0.81);
+}
+.nav-overlay4{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #000000c1;
+}
+#show-popup-4:checked ~ .popUp-ex2{
+  display: block;
+}
+#show-popup-4:checked ~ .nav-overlay4{
+  display: block ;
+}
+//valve in
+.tuongtac-in{
+  position: absolute;
+  top: 60px;
+  right: 95px;
+  width: 70px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popUp-in{
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 170px;
+  width: 150px;
+  height: 140px;
+  border-radius: 10px;
+  z-index: 99;
+  background-color: rgba(246, 246, 225, 0.81);
+}
+.nav-overlay5{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #000000c1;
+}
+#show-popup-5:checked ~ .popUp-in{
+  display: block;
+}
+#show-popup-5:checked ~ .nav-overlay5{
+  display: block ;
+}
+// 
 @keyframes fadeIn {
   from {
     opacity: 0;
