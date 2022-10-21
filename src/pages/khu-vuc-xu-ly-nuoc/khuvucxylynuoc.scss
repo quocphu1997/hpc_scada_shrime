@@ -1,52 +1,7 @@
 .wrapper-pic {
   position: relative;
 }
-.click-pump-in {
-  width: 80px;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 200px;
-  left: 80px;
-}
-.click-smart-drum {
-  width: 105px;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 180px;
-  left: 173px;
-}
-.click-bo-loc {
-  width: 269px;
-  height: 265px;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 10px;
-  left: 405px;
-}
-.modal-dialog {
-  display: block;
-  position: absolute;
-  top: 200px;
-  left: 50px;
-  width: 200px;
-  padding-top: 10px;
-  text-align: center;
-  border-radius: 10px;
-  background-color: rgb(212, 243, 127);
-}
-.modal-dialog-2 {
-  display: none;
-  position: absolute;
-  top: 200px;
-  left: 120px;
-  width: 200px;
-  padding-top: 10px;
-  text-align: center;
-  border-radius: 10px;
-  background-color: rgb(212, 243, 127);
-}
+// btn - chế độ
 .btn-chedo-xlnc {
   position: absolute;
   top: 15px;
@@ -61,16 +16,6 @@
 }
 .btn-color-man {
   background-color: rgb(209, 146, 30);
-}
-.modal-overlay {
-  display: none;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.322);
 }
 .btn-modal-xlc {
   font-weight: 600;
@@ -87,6 +32,89 @@
   padding: 10px 20px;
   margin: 0 5px;
 }
+.pic-xlnc{
+  padding: 50px;
+}
+// bom
+.dk-kxln-bom-1{
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  top: 257px;
+  left: 51px;
+  transform: scaleX(-1);
+}
+.dk-kxln-bom-2{
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  top: 105px;
+  left: 202px;
+}
+.dk-kxln-bom-3{
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  bottom: 138px;
+  right: 125px;
+}
+.dk-kxln-bom-4{
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  bottom: 138px;
+  left: 220px;
+}
+// van
+.dk-kxln-van-1{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 208px;
+  left: 105px;
+  transform: rotate(180deg);
+}
+.dk-kxln-van-true-1{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 218px;
+  left: 100px;
+  transform: rotate(90deg);
+}
+.dk-kxln-van-2{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 50px;
+  left: 405px;
+  transform: rotate(180deg);
+}
+.dk-kxln-van-true-2{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 60px;
+  left: 415px;
+  transform: rotate(270deg);
+}
+.dk-kxln-van-3{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 92px;
+  left: 405px;
+  transform: rotate(180deg);
+}
+.dk-kxln-van-true-3{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 102px;
+  left: 415px;
+  transform: rotate(270deg);
+}
+// 
 @media only screen and (min-width: 1142px) {
   .pic-xlnc {
     display: block;
@@ -98,13 +126,16 @@
     display: none;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 687px) {
   .pic-xlnc {
     display: none;
   }
   .nav-overlay-landscape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 75px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -113,20 +144,21 @@
     color: white;
   }
   .text-landscape {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
+    padding-right: 10px;
   }
-  .main-overlay {
-    display: none;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.322);
+  .phone-kvxln-w686 {
+    animation: rotates linear infinite 2.5s;
+  }
+}
+@keyframes rotates {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }

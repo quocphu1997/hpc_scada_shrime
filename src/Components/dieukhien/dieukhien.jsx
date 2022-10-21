@@ -413,6 +413,16 @@ export default function Dieukhien() {
       <label htmlFor="show-popup-3" className="nav-overlay3"></label>
       <label htmlFor="show-popup-4" className="nav-overlay4"></label>
       <label htmlFor="show-popup-5" className="nav-overlay5"></label>
+      {/* overlay width:686 */}
+      <div className="overlay-w686">
+        <p className="text-w686">Hãy xoay màn hình lại !</p>
+        <img
+          className="phone-w686"
+          width={100}
+          src="../images/smartphone.png"
+          alt=""
+        />
+      </div>
     </div>
   );
 }

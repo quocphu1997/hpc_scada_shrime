@@ -88,7 +88,7 @@
   border-radius: 10px;
   background-color: red;
 }
-.name-500l{
+.name-500l {
   position: absolute;
   top: 420px;
   left: 50px;
@@ -99,7 +99,7 @@
   border-radius: 10px;
   background-color: rgba(41, 39, 39, 0.504);
 }
-.err-be{
+.err-be {
   position: absolute;
   top: 55px;
   right: 285px;
@@ -110,7 +110,7 @@
   border-radius: 10px;
   background-color: red;
 }
-.thong-so-oxy{
+.thong-so-oxy {
   position: absolute;
   text-align: center;
   width: 350px;
@@ -123,7 +123,7 @@
   color: #000000;
   font-size: 5rem;
 }
-.thong-so-nhietdo{
+.thong-so-nhietdo {
   position: absolute;
   width: 350px;
   text-align: center;
@@ -132,12 +132,12 @@
   font-weight: 600;
   padding: 1px 20px;
   border-radius: 10px;
-  background-color: #FFFFA7;
+  background-color: #ffffa7;
   color: black;
   font-size: 5rem;
 }
 // motor
-.tuongtac-mt{
+.tuongtac-mt {
   position: absolute;
   top: 170px;
   left: 80px;
@@ -145,7 +145,7 @@
   height: 135px;
   background-color: rgba(0, 0, 0, 0);
 }
-.popUp-mt{
+.popUp-mt {
   display: none;
   position: absolute;
   top: 310px;
@@ -156,7 +156,7 @@
   z-index: 99;
   background-color: rgba(246, 246, 225, 0.81);
 }
-.nav-overlay1{
+.nav-overlay1 {
   display: none;
   position: absolute;
   top: 0;
@@ -166,7 +166,7 @@
   z-index: 10;
   background-color: #000000c1;
 }
-.title-pp{
+.title-pp {
   padding: 2px 0;
   margin-bottom: 2px;
   display: flex;
@@ -178,26 +178,26 @@
   justify-content: center;
   text-align: center;
 }
-.btn-dk{
+.btn-dk {
   width: 100px;
   font-size: 1.2rem;
   font-weight: 700;
   border-radius: 20px;
   padding: 7px;
   border: 1px solid black;
-  margin: 5px 5px 0 5px; 
-  margin-left:50% ;
+  margin: 5px 5px 0 5px;
+  margin-left: 50%;
   transform: translateX(-50%);
 }
 // show motor
-#show-popup-1:checked ~ .popUp-mt{
+#show-popup-1:checked ~ .popUp-mt {
   display: block;
 }
-#show-popup-1:checked ~ .nav-overlay1{
-  display: block ;
+#show-popup-1:checked ~ .nav-overlay1 {
+  display: block;
 }
 //exhaust 1
-.tuongtac-ex1{
+.tuongtac-ex1 {
   position: absolute;
   bottom: 95px;
   left: 65px;
@@ -205,7 +205,7 @@
   height: 70px;
   background-color: rgba(0, 0, 0, 0);
 }
-.popUp-ex1{
+.popUp-ex1 {
   display: none;
   position: absolute;
   bottom: 20px;
@@ -216,7 +216,7 @@
   z-index: 99;
   background-color: rgba(246, 246, 225, 0.81);
 }
-.nav-overlay2{
+.nav-overlay2 {
   display: none;
   position: absolute;
   top: 0;
@@ -228,14 +228,14 @@
 }
 //
 // show ex1
-#show-popup-2:checked ~ .popUp-ex1{
+#show-popup-2:checked ~ .popUp-ex1 {
   display: block;
 }
-#show-popup-2:checked ~ .nav-overlay2{
-  display: block ;
+#show-popup-2:checked ~ .nav-overlay2 {
+  display: block;
 }
 //valve  cyclic
-.tuongtac-tt{
+.tuongtac-tt {
   position: absolute;
   bottom: 125px;
   left: 270px;
@@ -243,7 +243,7 @@
   height: 100px;
   background-color: rgba(0, 0, 0, 0);
 }
-.popUp-tt{
+.popUp-tt {
   display: none;
   position: absolute;
   bottom: 20px;
@@ -254,7 +254,7 @@
   z-index: 99;
   background-color: rgba(246, 246, 225, 0.81);
 }
-.nav-overlay3{
+.nav-overlay3 {
   display: none;
   position: absolute;
   top: 0;
@@ -264,14 +264,14 @@
   z-index: 10;
   background-color: #000000c1;
 }
-#show-popup-3:checked ~ .popUp-tt{
+#show-popup-3:checked ~ .popUp-tt {
   display: block;
 }
-#show-popup-3:checked ~ .nav-overlay3{
-  display: block ;
+#show-popup-3:checked ~ .nav-overlay3 {
+  display: block;
 }
 //valve  exhaust 2
-.tuongtac-ex2{
+.tuongtac-ex2 {
   position: absolute;
   bottom: 145px;
   right: 200px;
@@ -279,7 +279,7 @@
   height: 70px;
   background-color: rgba(0, 0, 0, 0);
 }
-.popUp-ex2{
+.popUp-ex2 {
   display: none;
   position: absolute;
   bottom: 70px;
@@ -290,7 +290,7 @@
   z-index: 99;
   background-color: rgba(246, 246, 225, 0.81);
 }
-.nav-overlay4{
+.nav-overlay4 {
   display: none;
   position: absolute;
   top: 0;
@@ -300,14 +300,14 @@
   z-index: 10;
   background-color: #000000c1;
 }
-#show-popup-4:checked ~ .popUp-ex2{
+#show-popup-4:checked ~ .popUp-ex2 {
   display: block;
 }
-#show-popup-4:checked ~ .nav-overlay4{
-  display: block ;
+#show-popup-4:checked ~ .nav-overlay4 {
+  display: block;
 }
 //valve in
-.tuongtac-in{
+.tuongtac-in {
   position: absolute;
   top: 60px;
   right: 95px;
@@ -315,7 +315,7 @@
   height: 100px;
   background-color: rgba(0, 0, 0, 0);
 }
-.popUp-in{
+.popUp-in {
   display: none;
   position: absolute;
   top: 55px;
@@ -326,7 +326,7 @@
   z-index: 99;
   background-color: rgba(246, 246, 225, 0.81);
 }
-.nav-overlay5{
+.nav-overlay5 {
   display: none;
   position: absolute;
   top: 0;
@@ -336,40 +336,50 @@
   z-index: 10;
   background-color: #000000c1;
 }
-#show-popup-5:checked ~ .popUp-in{
+#show-popup-5:checked ~ .popUp-in {
   display: block;
 }
-#show-popup-5:checked ~ .nav-overlay5{
-  display: block ;
+#show-popup-5:checked ~ .nav-overlay5 {
+  display: block;
 }
-// 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+//
+
 @media only screen and (max-width: 687px) {
-  .wrapper-chitietbe {
-    padding: 100px 50px 400px 50px;
-  }
-  .nav_tablet {
+  .overlay-w686 {
     position: absolute;
-    right: 0px !important;
-    left: 0px !important;
-    bottom: 0px !important;
-    width: 100% !important;
-    height: 50% !important;
-    z-index: 10;
-    background-color: white;
-    opacity: 0;
-    transform: translateY(300%) !important;
-    transition: all linear 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    background-color: #000000;
   }
-  .nav_input:checked ~ .nav_tablet {
-    opacity: 1;
-    transform: translateY(100%) !important;
+  .text-w686 {
+    margin: 0;
+    padding-right: 20px;
+  }
+  .phone-w686 {
+    animation: rotates linear infinite 5.5s;
+  }
+}
+@media only screen and (min-width:1142px) {
+  .overlay-w686 {
+    display: none;
+  }
+}
+@keyframes rotates {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }
