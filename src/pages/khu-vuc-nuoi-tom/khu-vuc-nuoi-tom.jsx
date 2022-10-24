@@ -44,7 +44,7 @@ export default function KhuVucNuoiTom() {
   const [blink4, setBlink4] = useState(false);
   const [blink5, setBlink5] = useState(false);
   const [blink6, setBlink6] = useState(false);
-  // 
+  //
   //
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [modalText, setModalText] = useState("Cài đặt");
@@ -571,6 +571,13 @@ export default function KhuVucNuoiTom() {
       payload: weConAccs,
     });
   }, [weConAccs]);
+  const checkWconSid = localStorage.getItem(WECON_LOGIN);
+  console.log(checkWconSid);
+  useEffect(() => {
+    if (checkWconSid === undefined || !checkWconSid) {
+      navigate("/login");
+    }
+  }, [checkWconSid]);
   // call box_http
   const { state: Box_http } = useAsync({
     dependancies: [weConAccs],
@@ -609,7 +616,7 @@ export default function KhuVucNuoiTom() {
                 </span>
               ) : (
                 <span
-                  className=" indicator indicar-err col-span-12"
+                  className=" indicator  col-span-12"
                   style={{ color: "transparent", background: "transparent" }}
                 >
                   console.error();
@@ -619,8 +626,13 @@ export default function KhuVucNuoiTom() {
 
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
-                <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
+                <span className="p-2 indicator indicar-oxy-temp">Oxy:...mg/l</span>
+                <span
+                  style={{ backgroundColor: "#FFFFA7" }}
+                  className="p-2 indicator indicar-oxy-temp"
+                >
+                  T:...℃
+                </span>
               </div>
             </div>
 
@@ -776,7 +788,7 @@ export default function KhuVucNuoiTom() {
                 </span>
               ) : (
                 <span
-                  className=" indicator indicar-err col-span-12"
+                  className=" indicator col-span-12"
                   style={{ color: "transparent", background: "transparent" }}
                 >
                   console.error();
@@ -786,8 +798,13 @@ export default function KhuVucNuoiTom() {
 
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
-                <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
+                <span className="p-2 indicator indicar-oxy-temp">Oxy:...mg/l</span>
+                <span
+                  style={{ backgroundColor: "#FFFFA7" }}
+                  className="p-2 indicator indicar-oxy-temp"
+                >
+                  T:...℃
+                </span>
               </div>
             </div>
 
@@ -943,7 +960,7 @@ export default function KhuVucNuoiTom() {
                 </span>
               ) : (
                 <span
-                  className=" indicator indicar-err col-span-12"
+                  className=" indicator  col-span-12"
                   style={{ color: "transparent", background: "transparent" }}
                 >
                   console.error();
@@ -953,8 +970,13 @@ export default function KhuVucNuoiTom() {
 
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
-                <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
+                <span className="p-2 indicator indicar-oxy-temp">Oxy:...mg/l</span>
+                <span
+                  style={{ backgroundColor: "#FFFFA7" }}
+                  className="p-2 indicator indicar-oxy-temp"
+                >
+                  T:...℃
+                </span>
               </div>
             </div>
 
@@ -1110,7 +1132,7 @@ export default function KhuVucNuoiTom() {
                 </span>
               ) : (
                 <span
-                  className=" indicator indicar-err col-span-12"
+                  className=" indicator  col-span-12"
                   style={{ color: "transparent", background: "transparent" }}
                 >
                   console.error();
@@ -1120,8 +1142,13 @@ export default function KhuVucNuoiTom() {
 
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
-                <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
+                <span className="p-2 indicator indicar-oxy-temp">Oxy:...mg/l</span>
+                <span
+                  style={{ backgroundColor: "#FFFFA7" }}
+                  className="p-2 indicator indicar-oxy-temp"
+                >
+                  T:...℃
+                </span>
               </div>
             </div>
 
@@ -1277,7 +1304,7 @@ export default function KhuVucNuoiTom() {
                 </span>
               ) : (
                 <span
-                  className=" indicator indicar-err col-span-12"
+                  className=" indicator  col-span-12"
                   style={{ color: "transparent", background: "transparent" }}
                 >
                   console.error();
@@ -1287,8 +1314,13 @@ export default function KhuVucNuoiTom() {
 
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
-                <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
+                <span className="p-2 indicator indicar-oxy-temp">Oxy:...mg/l</span>
+                <span
+                  style={{ backgroundColor: "#FFFFA7" }}
+                  className="p-2 indicator indicar-oxy-temp"
+                >
+                  T:...℃
+                </span>
               </div>
             </div>
 
@@ -1444,7 +1476,7 @@ export default function KhuVucNuoiTom() {
                 </span>
               ) : (
                 <span
-                  className=" indicator indicar-err col-span-12"
+                  className=" indicator  col-span-12"
                   style={{ color: "transparent", background: "transparent" }}
                 >
                   console.error();
@@ -1454,8 +1486,13 @@ export default function KhuVucNuoiTom() {
 
             <div className="col-start-3 col-span-5 hienthi-be">
               <div className="flex flex-wrap justify-center ml-2 mb-6 solieu-be">
-                <span className="p-2 indicator">Oxy:...mg/l</span>
-                <span style={{backgroundColor:'#FFFFA7'}} className="p-2 indicator">T:...℃</span>
+                <span className="p-2 indicator indicar-oxy-temp">Oxy:...mg/l</span>
+                <span
+                  style={{ backgroundColor: "#FFFFA7" }}
+                  className="p-2 indicator indicar-oxy-temp"
+                >
+                  T:...℃
+                </span>
               </div>
             </div>
 
