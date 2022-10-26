@@ -3,6 +3,37 @@ import React from "react";
 export default function CumKcn() {
   return (
     <>
+      {/* van bể lắng */}
+      <>
+        <input
+          style={{ display: "none" }}
+          id="show-pp-kcn-in-blg1"
+          type="checkbox"
+        />
+        <label
+          htmlFor="show-pp-kcn-in-blg1"
+          className="tuongtac-kcn-in-blg1"
+        ></label>
+        <div className="popUp-kcn-in-blg1 popUp-kxln">
+          <span className="title-kxln-pp">Van in bể lắng</span>
+          <div className="dk-kxln-btn">
+            <button
+              style={{ backgroundColor: "#76ff03" }}
+              className="btn-kxln-dk"
+              // onClick={handleOn_mt}
+            >
+              Chạy
+            </button>
+            <button
+              style={{ backgroundColor: "#ff5722" }}
+              className="btn-kxln-dk"
+              // onClick={handleOff_mt}
+            >
+              Dừng
+            </button>
+          </div>
+        </div>
+      </>
       {/* van ss1 */}
       <>
         <input
@@ -160,10 +191,11 @@ export default function CumKcn() {
       </>
       {/* overlay */}
       <label htmlFor="show-pp-kcn-in-ss1" className="nav-kcn-overlay16"></label>
+      <label htmlFor="show-pp-kcn-mt-ss1" className="nav-kcn-overlay17"></label>
       <label htmlFor="show-pp-kcn-xt-ss1" className="nav-kcn-overlay18"></label>
       <label htmlFor="show-pp-kcn-tt-ss1" className="nav-kcn-overlay19"></label>
-      <label htmlFor="show-pp-kcn-mt-ss1" className="nav-kcn-overlay17"></label>
       <label htmlFor="show-pp-kcn-mt-tt" className="nav-kcn-overlay20"></label>
+      <label htmlFor="show-pp-kcn-in-blg1" className="nav-kcn-overlay21"></label>
     </>
   );
 }

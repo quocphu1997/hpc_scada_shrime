@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import DenUv from "./den-uv";
 import VanBoLoc from "./van-bo-loc";
 
 export default function HieuUngDoiTuongVan() {
@@ -58,6 +59,7 @@ export default function HieuUngDoiTuongVan() {
   }, [blink33]);
   return (
     <>
+      {/* van đầu vào */}
       {errvan1 ? (
         blink5 ? (
           <img
@@ -87,7 +89,9 @@ export default function HieuUngDoiTuongVan() {
       )}
       {/* van bo loc */}
       <VanBoLoc />
-      {/*van  khu xu ly nuoc */}
+      {/* đèn UV */}
+      <DenUv />
+      {/*van  khu cap nuoc */}
       {errvan14 ? (
         blink31 ? (
           <img

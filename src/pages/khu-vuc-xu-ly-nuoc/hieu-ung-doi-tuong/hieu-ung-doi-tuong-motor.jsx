@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import "../khuvucxylynuoc.scss";
 
 export default function HieuUngDoiTuongMotor() {
+  const { pump } = useSelector((state) => state.quanlyDoiTuongReducer);
   // dk motor
   const [runmt1, setRunmt1] = useState(false);
   const [runmt2, setRunmt2] = useState(false);
@@ -17,6 +19,13 @@ export default function HieuUngDoiTuongMotor() {
   const [blink2, setBlink2] = useState(false);
   const [blink3, setBlink3] = useState(false);
   const [blink4, setBlink4] = useState(false);
+  //
+  useEffect(() => {
+    setRunmt1(pump.mt1);
+  }, [pump.mt1]);
+  useEffect(() => {
+    setRunmt2(pump.mt2);
+  }, [pump.mt2]);
   // hieu ung
   useEffect(() => {
     if (errmt1) {

@@ -14,6 +14,7 @@ import BomHaimetba from "./popup-doi-tuong/bom-haimetba";
 import VanBoLoc from "./popup-doi-tuong/van-bo-loc";
 import CumKcn from "./popup-doi-tuong/cum-kcn";
 import VanXa from "./popup-doi-tuong/van-xa";
+import SmartDrumFilter from "./popup-doi-tuong/smart-drum-filter";
 
 export default function KhuVucXuLyNuoc() {
   const [stateManAu, setStateManAu] = useState(false);
@@ -47,7 +48,7 @@ export default function KhuVucXuLyNuoc() {
         </button>
         {/* ảnh chính giao diện */}
         <img className="pic-xlnc" src="./images/kvxln.svg" alt="pic_123" />
-        {/* hiệu ứng doi tuong */}
+        {/* hiệu ứng - doi tuong */}
         <>
           {/* motor */}
           <HieuUngDoiTuongMotor />
@@ -82,6 +83,8 @@ export default function KhuVucXuLyNuoc() {
         <BomDauVao />
         {/* van đầu vào */}
         <VanDauVao />
+        {/* smart drum filter */}
+        <SmartDrumFilter/>
         {/* bơm 2m3 */}
         <BomHaimetba />
         {/* van in bo loc */}

@@ -7,11 +7,13 @@ export default function LoiBaoMuc() {
   const [errbm2, setErrbm2] = useState(false);
   const [errbm3, setErrbm3] = useState(false);
   const [errbm4, setErrbm4] = useState(false);
+  const [errbm5, setErrbm5] = useState(false);
   // blink bao muc
   const [blink34, setBlink34] = useState(false);
   const [blink35, setBlink35] = useState(false);
   const [blink36, setBlink36] = useState(false);
   const [blink37, setBlink37] = useState(false);
+  const [blink38, setBlink38] = useState(false);
   // hieu ung err bao muc
   useEffect(() => {
     if (errbm1) {
@@ -45,12 +47,21 @@ export default function LoiBaoMuc() {
       return () => clearInterval(interval);
     }
   }, [blink37]);
+  useEffect(() => {
+    if (errbm5) {
+      const interval = setInterval(() => {
+        setBlink38(!blink38);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [blink38]);
   return (
     <>
       {errbm1 && blink34 && <span className="kxln-2m3">Nước đang cao</span>}
       {errbm2 && blink35 && <span className="kxln-beLang">Nước đang cao</span>}
       {errbm3 && blink36 && <span className="kxln-ss1">Nước đang cao</span>}
       {errbm4 && blink37 && <span className="kxln-ss2">Nước đang cao</span>}
+      {errbm5 && blink38 && <span className="kxln-drum-filter">Nước đang cao</span>}
     </>
   );
 }
