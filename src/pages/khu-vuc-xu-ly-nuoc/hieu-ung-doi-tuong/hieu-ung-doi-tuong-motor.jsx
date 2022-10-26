@@ -26,6 +26,12 @@ export default function HieuUngDoiTuongMotor() {
   useEffect(() => {
     setRunmt2(pump.mt2);
   }, [pump.mt2]);
+  useEffect(() => {
+    setRunmt3(pump.mt3);
+  }, [pump.mt3]);
+  useEffect(() => {
+    setRunmt4(pump.mt4);
+  }, [pump.mt4]);
   // hieu ung
   useEffect(() => {
     if (errmt1) {

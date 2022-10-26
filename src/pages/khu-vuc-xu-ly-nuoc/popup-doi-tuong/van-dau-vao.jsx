@@ -1,6 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { DT_VDV, DT_VUV } from "../../../store/name.types/name.type";
 
 export default function VanDauVao() {
+  const dispatch = useDispatch();
+  const handleOn_van = async () => {
+    document.getElementById("show-pp-kxln-vdv").checked = false;
+    dispatch({ type: DT_VDV, payload: true });
+  };
+  const handleOff_van = async () => {
+    document.getElementById("show-pp-kxln-vdv").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_VDV, payload: false });
+    }
+  };
   return (
     <>
       <input
@@ -15,14 +28,14 @@ export default function VanDauVao() {
           <button
             style={{ backgroundColor: "#76ff03" }}
             className="btn-kxln-dk"
-            // onClick={handleOn_mt}
+            onClick={handleOn_van}
           >
             Chạy
           </button>
           <button
             style={{ backgroundColor: "#ff5722" }}
             className="btn-kxln-dk"
-            // onClick={handleOff_mt}
+            onClick={handleOff_van}
           >
             Dừng
           </button>

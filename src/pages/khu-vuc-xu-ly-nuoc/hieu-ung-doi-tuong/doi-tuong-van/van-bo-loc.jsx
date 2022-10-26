@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function VanBoLoc() {
+  const { van_kxln } = useSelector((state) => state.quanlyDoiTuongReducer);
   // dk van bo loc
   const [runvan2, setRunvan2] = useState(false);
   const [runvan3, setRunvan3] = useState(false);
@@ -40,6 +42,43 @@ export default function VanBoLoc() {
   const [blink15, setBlink15] = useState(false);
   const [blink16, setBlink16] = useState(false);
   const [blink17, setBlink17] = useState(false);
+  //  redux state
+  useEffect(() => {
+    setRunvan2(van_kxln.bl.in.in1);
+  }, [van_kxln.bl.in.in1]);
+  useEffect(() => {
+    setRunvan3(van_kxln.bl.in.in2);
+  }, [van_kxln.bl.in.in2]);
+  useEffect(() => {
+    setRunvan4(van_kxln.bl.in.in3);
+  }, [van_kxln.bl.in.in3]);
+  useEffect(() => {
+    setRunvan5(van_kxln.bl.in.in4);
+  }, [van_kxln.bl.in.in4]);
+  useEffect(() => {
+    setRunvan6(van_kxln.bl.in.in5);
+  }, [van_kxln.bl.in.in5]);
+  useEffect(() => {
+    setRunvan7(van_kxln.bl.in.in6);
+  }, [van_kxln.bl.in.in6]);
+  useEffect(() => {
+    setRunvan8(van_kxln.bl.out.out1);
+  }, [van_kxln.bl.out.out1]);
+  useEffect(() => {
+    setRunvan9(van_kxln.bl.out.out2);
+  }, [van_kxln.bl.out.out2]);
+  useEffect(() => {
+    setRunvan10(van_kxln.bl.out.out3);
+  }, [van_kxln.bl.out.out3]);
+  useEffect(() => {
+    setRunvan11(van_kxln.bl.out.out4);
+  }, [van_kxln.bl.out.out4]);
+  useEffect(() => {
+    setRunvan12(van_kxln.bl.out.out5);
+  }, [van_kxln.bl.out.out5]);
+  useEffect(() => {
+    setRunvan13(van_kxln.bl.out.out6);
+  }, [van_kxln.bl.out.out6]);
   //   hieu ung blink
   useEffect(() => {
     if (errvan2) {

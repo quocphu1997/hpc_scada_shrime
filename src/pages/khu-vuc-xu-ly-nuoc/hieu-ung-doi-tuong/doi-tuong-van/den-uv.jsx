@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function DenUv() {
+  const { van_kxln } = useSelector((state) => state.quanlyDoiTuongReducer);
   const [runvan_uv1, setRunvan_uv1] = useState(false);
   //   err van uv
   const [errvan_uv1, setErrvan_uv1] = useState(false);
   // blink
   const [blink1, setBlink1] = useState(false);
+  // redux state
+  useEffect(() => {
+    setRunvan_uv1(van_kxln.vUv);
+  }, [van_kxln.vUv]);
   // hieu ung blink
   useEffect(() => {
     if (errvan_uv1) {

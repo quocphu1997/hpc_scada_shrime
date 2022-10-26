@@ -1,6 +1,143 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import {
+  DT_IN1,
+  DT_IN2,
+  DT_IN3,
+  DT_IN4,
+  DT_IN5,
+  DT_IN6,
+  DT_OUT1,
+  DT_OUT2,
+  DT_OUT3,
+  DT_OUT4,
+  DT_OUT5,
+  DT_OUT6,
+} from "../../../store/name.types/name.type";
 
 export default function VanBoLoc() {
+  const dispatch = useDispatch();
+  const handleOn_in1 = async () => {
+    document.getElementById("show-pp-kxln-in-bl1").checked = false;
+    dispatch({ type: DT_IN1, payload: true });
+  };
+  const handleOff_in1 = async () => {
+    document.getElementById("show-pp-kxln-in-bl1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_IN1, payload: false });
+    }
+  };
+  const handleOn_in2 = async () => {
+    document.getElementById("show-pp-kxln-in-bl2").checked = false;
+    dispatch({ type: DT_IN2, payload: true });
+  };
+  const handleOff_in2 = async () => {
+    document.getElementById("show-pp-kxln-in-bl2").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_IN2, payload: false });
+    }
+  };
+  const handleOn_in3 = async () => {
+    document.getElementById("show-pp-kxln-in-bl3").checked = false;
+    dispatch({ type: DT_IN3, payload: true });
+  };
+  const handleOff_in3 = async () => {
+    document.getElementById("show-pp-kxln-in-bl3").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_IN3, payload: false });
+    }
+  };
+  const handleOn_in4 = async () => {
+    document.getElementById("show-pp-kxln-in-bl4").checked = false;
+    dispatch({ type: DT_IN4, payload: true });
+  };
+  const handleOff_in4 = async () => {
+    document.getElementById("show-pp-kxln-in-bl4").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_IN4, payload: false });
+    }
+  };
+  const handleOn_in5 = async () => {
+    document.getElementById("show-pp-kxln-in-bl5").checked = false;
+    dispatch({ type: DT_IN5, payload: true });
+  };
+  const handleOff_in5 = async () => {
+    document.getElementById("show-pp-kxln-in-bl5").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_IN5, payload: false });
+    }
+  };
+  const handleOn_in6 = async () => {
+    document.getElementById("show-pp-kxln-in-bl6").checked = false;
+    dispatch({ type: DT_IN6, payload: true });
+  };
+  const handleOff_in6 = async () => {
+    document.getElementById("show-pp-kxln-in-bl6").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_IN6, payload: false });
+    }
+  };
+  //
+  const handleOn_out1 = async () => {
+    document.getElementById("show-pp-kxln-out-bl1").checked = false;
+    dispatch({ type: DT_OUT1, payload: true });
+  };
+  const handleOff_out1 = async () => {
+    document.getElementById("show-pp-kxln-out-bl1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_OUT1, payload: false });
+    }
+  };
+  const handleOn_out2 = async () => {
+    document.getElementById("show-pp-kxln-out-bl2").checked = false;
+    dispatch({ type: DT_OUT2, payload: true });
+  };
+  const handleOff_out2 = async () => {
+    document.getElementById("show-pp-kxln-out-bl2").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_OUT2, payload: false });
+    }
+  };
+  const handleOn_out3 = async () => {
+    document.getElementById("show-pp-kxln-out-bl3").checked = false;
+    dispatch({ type: DT_OUT3, payload: true });
+  };
+  const handleOff_out3 = async () => {
+    document.getElementById("show-pp-kxln-out-bl3").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_OUT3, payload: false });
+    }
+  };
+  const handleOn_out4 = async () => {
+    document.getElementById("show-pp-kxln-out-bl4").checked = false;
+    dispatch({ type: DT_OUT4, payload: true });
+  };
+  const handleOff_out4 = async () => {
+    document.getElementById("show-pp-kxln-out-bl4").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_OUT4, payload: false });
+    }
+  };
+  const handleOn_out5 = async () => {
+    document.getElementById("show-pp-kxln-out-bl5").checked = false;
+    dispatch({ type: DT_OUT5, payload: true });
+  };
+  const handleOff_out5 = async () => {
+    document.getElementById("show-pp-kxln-out-bl5").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_OUT5, payload: false });
+    }
+  };
+  const handleOn_out6 = async () => {
+    document.getElementById("show-pp-kxln-out-bl6").checked = false;
+    dispatch({ type: DT_OUT6, payload: true });
+  };
+  const handleOff_out6 = async () => {
+    document.getElementById("show-pp-kxln-out-bl6").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      dispatch({ type: DT_OUT6, payload: false });
+    }
+  };
   return (
     <>
       {/* in 1 */}
@@ -20,14 +157,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_in1}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_in1}
             >
               Dừng
             </button>
@@ -51,14 +188,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_in2}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_in2}
             >
               Dừng
             </button>
@@ -82,14 +219,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_in3}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_in3}
             >
               Dừng
             </button>
@@ -113,14 +250,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_in4}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_in4}
             >
               Dừng
             </button>
@@ -144,14 +281,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_in5}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_in5}
             >
               Dừng
             </button>
@@ -175,14 +312,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_in6}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_in6}
             >
               Dừng
             </button>
@@ -206,14 +343,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_out1}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_out1}
             >
               Dừng
             </button>
@@ -237,14 +374,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_out2}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_out2}
             >
               Dừng
             </button>
@@ -268,14 +405,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_out3}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_out3}
             >
               Dừng
             </button>
@@ -299,14 +436,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_out4}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_out4}
             >
               Dừng
             </button>
@@ -330,14 +467,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_out5}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_out5}
             >
               Dừng
             </button>
@@ -361,14 +498,14 @@ export default function VanBoLoc() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_out6}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_out6}
             >
               Dừng
             </button>

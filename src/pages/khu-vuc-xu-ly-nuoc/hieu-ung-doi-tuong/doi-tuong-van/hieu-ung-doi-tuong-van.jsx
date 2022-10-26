@@ -1,28 +1,44 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import DenUv from "./den-uv";
 import VanBoLoc from "./van-bo-loc";
 
 export default function HieuUngDoiTuongVan() {
+  const { van_kxln, van_kcn } = useSelector(
+    (state) => state.quanlyDoiTuongReducer
+  );
   // dkvan
   const [runvan1, setRunvan1] = useState(false);
-  // dk van kxln
+  // dk van kcn
   const [runvan14, setRunvan14] = useState(false);
   const [runvan15, setRunvan15] = useState(false);
   const [runvan16, setRunvan16] = useState(false);
   // err van
   const [errvan1, setErrvan1] = useState(false);
-  // err van kxln
+  // err van kcn
   const [errvan14, setErrvan14] = useState(false);
   const [errvan15, setErrvan15] = useState(false);
   const [errvan16, setErrvan16] = useState(false);
 
   //   err blink
   const [blink5, setBlink5] = useState(false);
-  // err blink kxln
+  // err blink kcn
   const [blink31, setBlink31] = useState(false);
   const [blink32, setBlink32] = useState(false);
   const [blink33, setBlink33] = useState(false);
-
+  // redux state
+  useEffect(() => {
+    setRunvan1(van_kxln.vdv);
+  }, [van_kxln.vdv]);
+  useEffect(() => {
+    setRunvan16(van_kcn.van_ss1);
+  }, [van_kcn.van_ss1]);
+  useEffect(() => {
+    setRunvan15(van_kcn.van_xatran);
+  }, [van_kcn.van_xatran]);
+  useEffect(() => {
+    setRunvan14(van_kcn.van_tt);
+  }, [van_kcn.van_tt]);
   // blink van
   useEffect(() => {
     if (errvan1) {
@@ -32,7 +48,7 @@ export default function HieuUngDoiTuongVan() {
       return () => clearInterval(interval);
     }
   }, [blink5]);
-  // blink van kxln
+  // blink van kcn
   useEffect(() => {
     if (errvan14) {
       const interval = setInterval(() => {

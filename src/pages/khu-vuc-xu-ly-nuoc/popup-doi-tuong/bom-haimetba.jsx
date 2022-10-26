@@ -10,7 +10,9 @@ export default function BomHaimetba() {
   };
   const handleOff_mt = async () => {
     document.getElementById("show-pp-kxln-2m3").checked = false;
-    await dispatch({ type: DT_MT2, payload: false });
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_MT2, payload: false });
+    }
   };
   return (
     <>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function VanXaBoloc() {
+  const { van_kxln } = useSelector((state) => state.quanlyDoiTuongReducer);
   // dk van xa bo loc
   const [runex1, setEx1] = useState(false);
   const [runex2, setEx2] = useState(false);
@@ -22,6 +24,25 @@ export default function VanXaBoloc() {
   const [blink21, setBlink21] = useState(false);
   const [blink22, setBlink22] = useState(false);
   const [blink23, setBlink23] = useState(false);
+  //  redux state
+  useEffect(() => {
+    setEx1(van_kxln.bl.ex.ex1);
+  }, [van_kxln.bl.ex.ex1]);
+  useEffect(() => {
+    setEx2(van_kxln.bl.ex.ex2);
+  }, [van_kxln.bl.ex.ex2]);
+  useEffect(() => {
+    setEx3(van_kxln.bl.ex.ex3);
+  }, [van_kxln.bl.ex.ex3]);
+  useEffect(() => {
+    setEx4(van_kxln.bl.ex.ex4);
+  }, [van_kxln.bl.ex.ex4]);
+  useEffect(() => {
+    setEx5(van_kxln.bl.ex.ex5);
+  }, [van_kxln.bl.ex.ex5]);
+  useEffect(() => {
+    setEx6(van_kxln.bl.ex.ex6);
+  }, [van_kxln.bl.ex.ex6]);
   //   blink
   useEffect(() => {
     if (errex1) {

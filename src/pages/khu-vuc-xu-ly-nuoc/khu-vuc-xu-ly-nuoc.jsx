@@ -6,6 +6,7 @@ import LoiBaoMuc from "./loi-bao-muc/loi-bao-muc";
 import HieuUngDoiTuongMotor from "./hieu-ung-doi-tuong/hieu-ung-doi-tuong-motor";
 import HieuUngDoiTuongVan from "./hieu-ung-doi-tuong/doi-tuong-van/hieu-ung-doi-tuong-van";
 import VanXaBoloc from "./hieu-ung-doi-tuong/doi-tuong-van-xa/van-xa-boloc";
+import VanXaboloc from "./popup-doi-tuong/van-xa-boloc";
 import VanXaKhulocnuoc from "./hieu-ung-doi-tuong/doi-tuong-van-xa/van-xa-khulocnuoc";
 import VanXaKhucapnuoc from "./hieu-ung-doi-tuong/doi-tuong-van-xa/van-xa-khucapnuoc";
 import BomDauVao from "./popup-doi-tuong/bom-dau-vao";
@@ -84,11 +85,13 @@ export default function KhuVucXuLyNuoc() {
         {/* van đầu vào */}
         <VanDauVao />
         {/* smart drum filter */}
-        <SmartDrumFilter/>
+        <SmartDrumFilter />
         {/* bơm 2m3 */}
         <BomHaimetba />
         {/* van in bo loc */}
         <VanBoLoc />
+        {/* van xa bo loc */}
+        <VanXaboloc />
         {/* cum van khu cấp nước */}
         <CumKcn />
         {/* van xa */}

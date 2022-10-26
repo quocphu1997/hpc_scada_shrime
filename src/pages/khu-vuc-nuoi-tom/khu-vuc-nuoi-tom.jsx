@@ -560,30 +560,30 @@ export default function KhuVucNuoiTom() {
   }, [blink6]);
   // hiệu ứng chạy
   // login wecon
-  const { state: weConAccs } = useAsync({
-    dependancies: [],
-    service: () => fetchLoginApi(),
-  });
-  useEffect(() => {
-    localStorage.setItem(WECON_LOGIN, JSON.stringify(weConAccs.sid));
-    dispatch({
-      type: ACC_WECON,
-      payload: weConAccs,
-    });
-  }, [weConAccs]);
-  const checkWconSid = localStorage.getItem(WECON_LOGIN);
-  console.log(checkWconSid);
-  useEffect(() => {
-    if (checkWconSid === undefined || !checkWconSid) {
-      navigate("/login");
-    }
-  }, [checkWconSid]);
-  // call box_http
-  const { state: Box_http } = useAsync({
-    dependancies: [weConAccs],
-    service: () => fetchCallBoxApi(),
-  });
-  console.log(Box_http);
+  // const { state: weConAccs } = useAsync({
+  //   dependancies: [],
+  //   service: () => fetchLoginApi(),
+  // });
+  // useEffect(() => {
+  //   localStorage.setItem(WECON_LOGIN, JSON.stringify(weConAccs.sid));
+  //   dispatch({
+  //     type: ACC_WECON,
+  //     payload: weConAccs,
+  //   });
+  // }, [weConAccs]);
+  // const checkWconSid = localStorage.getItem(WECON_LOGIN);
+  // console.log(checkWconSid);
+  // useEffect(() => {
+  //   if (checkWconSid === undefined || !checkWconSid) {
+  //     navigate("/login");
+  //   }
+  // }, [checkWconSid]);
+  // // call box_http
+  // const { state: Box_http } = useAsync({
+  //   dependancies: [weConAccs],
+  //   service: () => fetchCallBoxApi(),
+  // });
+  // console.log(Box_http);
   // lấy giá trị màn hình để breakpoint class
   const [dimention, setDimention] = useState({ width: window.innerWidth });
   const resizeScreen = () => {

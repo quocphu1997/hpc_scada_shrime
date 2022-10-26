@@ -1,6 +1,76 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import {
+  DT_MT3,
+  DT_MT4,
+  DT_SS1,
+  DT_TT,
+  DT_VUV,
+  DT_XT,
+} from "../../../store/name.types/name.type";
 
 export default function CumKcn() {
+  const dispatch = useDispatch();
+  const handleOn_mt1 = async () => {
+    document.getElementById("show-pp-kcn-mt-ss1").checked = false;
+    await dispatch({ type: DT_MT3, payload: true });
+  };
+  const handleOff_mt1 = async () => {
+    document.getElementById("show-pp-kcn-mt-ss1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_MT3, payload: false });
+    }
+  };
+  const handleOn_mt2 = async () => {
+    document.getElementById("show-pp-kcn-mt-tt").checked = false;
+    await dispatch({ type: DT_MT4, payload: true });
+  };
+  const handleOff_mt2 = async () => {
+    document.getElementById("show-pp-kcn-mt-tt").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_MT4, payload: false });
+    }
+  };
+  const handleOn_vUv = async () => {
+    document.getElementById("show-pp-kcn-in-blg1").checked = false;
+    await dispatch({ type: DT_VUV, payload: true });
+  };
+  const handleOff_vUv = async () => {
+    document.getElementById("show-pp-kcn-in-blg1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_VUV, payload: false });
+    }
+  };
+  const handleOn_ss1 = async () => {
+    document.getElementById("show-pp-kcn-in-ss1").checked = false;
+    await dispatch({ type: DT_SS1, payload: true });
+  };
+  const handleOff_ss1 = async () => {
+    document.getElementById("show-pp-kcn-in-ss1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_SS1, payload: false });
+    }
+  };
+  const handleOn_xt = async () => {
+    document.getElementById("show-pp-kcn-xt-ss1").checked = false;
+    await dispatch({ type: DT_XT, payload: true });
+  };
+  const handleOff_xt = async () => {
+    document.getElementById("show-pp-kcn-xt-ss1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_XT, payload: false });
+    }
+  };
+  const handleOn_tt = async () => {
+    document.getElementById("show-pp-kcn-tt-ss1").checked = false;
+    await dispatch({ type: DT_TT, payload: true });
+  };
+  const handleOff_tt = async () => {
+    document.getElementById("show-pp-kcn-tt-ss1").checked = false;
+    if (window.confirm("Bạn có chắc muốn dừng")) {
+      await dispatch({ type: DT_TT, payload: false });
+    }
+  };
   return (
     <>
       {/* van bể lắng */}
@@ -20,14 +90,14 @@ export default function CumKcn() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_vUv}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_vUv}
             >
               Dừng
             </button>
@@ -51,14 +121,14 @@ export default function CumKcn() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_ss1}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_ss1}
             >
               Dừng
             </button>
@@ -82,14 +152,14 @@ export default function CumKcn() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_xt}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_xt}
             >
               Dừng
             </button>
@@ -113,14 +183,14 @@ export default function CumKcn() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_tt}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_tt}
             >
               Dừng
             </button>
@@ -144,21 +214,21 @@ export default function CumKcn() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_mt1}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_mt1}
             >
               Dừng
             </button>
           </div>
         </div>
       </>
-      {/* motor tt */}
+      {/* motor tt-ss2 */}
       <>
         <input
           style={{ display: "none" }}
@@ -175,14 +245,14 @@ export default function CumKcn() {
             <button
               style={{ backgroundColor: "#76ff03" }}
               className="btn-kxln-dk"
-              // onClick={handleOn_mt}
+              onClick={handleOn_mt2}
             >
               Chạy
             </button>
             <button
               style={{ backgroundColor: "#ff5722" }}
               className="btn-kxln-dk"
-              // onClick={handleOff_mt}
+              onClick={handleOff_mt2}
             >
               Dừng
             </button>
@@ -195,7 +265,10 @@ export default function CumKcn() {
       <label htmlFor="show-pp-kcn-xt-ss1" className="nav-kcn-overlay18"></label>
       <label htmlFor="show-pp-kcn-tt-ss1" className="nav-kcn-overlay19"></label>
       <label htmlFor="show-pp-kcn-mt-tt" className="nav-kcn-overlay20"></label>
-      <label htmlFor="show-pp-kcn-in-blg1" className="nav-kcn-overlay21"></label>
+      <label
+        htmlFor="show-pp-kcn-in-blg1"
+        className="nav-kcn-overlay21"
+      ></label>
     </>
   );
 }
